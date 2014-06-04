@@ -2,6 +2,17 @@ tutum-docker-tomcat
 ===================
 Base docker image to run a Tomcat application server
 
+Image tags
+----------
+```
+    tutum/tomcat:latest
+    tutum/tomcat:8.0
+    tutum/tomcat:7.0
+    tutum/tomcat:6.0
+    tutum/tomcat:5.5
+    tutum/tomcat:4.1
+```
+
 
 Usage
 -----
@@ -12,11 +23,11 @@ To create the image `tutum/tomcat`, execute the following command on the tutum-d
 
 To run the image and bind to port :
 
-    docker run -d -p 8080:8080 tutum/glassfish
+    docker run -d -p 8080:8080 tutum/tomcat
 
 
 The first time that you run your container, a new user `admin` with all privileges 
-will be created in Glassfish with a random password. To get the password, check the logs
+will be created in Tomcat with a random password. To get the password, check the logs
 of the container by running:
 
     docker logs <CONTAINER_ID>
@@ -24,7 +35,7 @@ of the container by running:
 You will see an output like the following:
 
     ========================================================================
-    You can now connect to this Glassfish server using:
+    You can now connect to this Tomcat server using:
 
         admin:b1uKcRK3r6SF
 

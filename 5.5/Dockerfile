@@ -1,9 +1,8 @@
 FROM tifayuki/java:7
 MAINTAINER Feng Honglin <hfeng@tutum.co>
 
-ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
-    apt-get install -yq wget pwgen && \
+    apt-get install -yq --no-install-recommends wget pwgen ca-certificates && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 

@@ -1,5 +1,8 @@
 tutum-docker-tomcat
 ===================
+
+[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)
+
 Base docker image to run a Tomcat application server
 
 
@@ -27,7 +30,7 @@ To run the image and bind to port :
     docker run -d -p 8080:8080 tutum/tomcat
 
 
-The first time that you run your container, a new user `admin` with all privileges 
+The first time that you run your container, a new user `admin` with all privileges
 will be created in Tomcat with a random password. To get the password, check the logs
 of the container by running:
 

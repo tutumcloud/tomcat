@@ -9,7 +9,7 @@ fi
 PASS=${TOMCAT_PASS:-$(pwgen -s 12 1)}
 _word=$( [ ${TOMCAT_PASS} ] && echo "preset" || echo "random" )
 
-echo "=> Creating and admin user with a ${_word} password in Tomcat"
+echo "=> Creating an admin user with a ${_word} password in Tomcat"
 sed -i -r 's/<\/tomcat-users>//' ${CATALINA_HOME}/conf/tomcat-users.xml
 echo '<role rolename="manager-gui"/>' >> ${CATALINA_HOME}/conf/tomcat-users.xml
 echo '<role rolename="manager-script"/>' >> ${CATALINA_HOME}/conf/tomcat-users.xml

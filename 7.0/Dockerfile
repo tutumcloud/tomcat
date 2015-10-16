@@ -1,4 +1,4 @@
-FROM tifayuki/java:7
+FROM tifayuki/java:8
 MAINTAINER Feng Honglin <hfeng@tutum.co>
 
 RUN apt-get update && \
@@ -7,7 +7,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 ENV TOMCAT_MAJOR_VERSION 7
-ENV TOMCAT_MINOR_VERSION 7.0.55
+ENV TOMCAT_MINOR_VERSION 7.0.64
 ENV CATALINA_HOME /tomcat
 
 # INSTALL TOMCAT
